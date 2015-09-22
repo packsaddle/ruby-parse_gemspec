@@ -3,7 +3,7 @@ require_relative 'helper'
 module ParseGemspec
   class TestParser < Test::Unit::TestCase
     sub_test_case 'bigdecimal' do
-      gemspec = File.read('./test/fixtures/bigdecimal/bigdecimal.gemspec')
+      gemspec = File.read('./test/fixtures/bigdecimal-1.2.7/bigdecimal.gemspec')
       expected = {
         name: 'bigdecimal',
         version: '1.2.7'
