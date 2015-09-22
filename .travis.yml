@@ -4,5 +4,8 @@ rvm:
   - "2.1"
   - "2.2"
   - "ruby-head"
+matrix:
+  allow_failures:
+    - rvm: "ruby-head"
 before_install: "gem update bundler"
 script: "bundle exec rubocop && rake"
