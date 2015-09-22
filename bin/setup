@@ -1,7 +1,13 @@
 #!/usr/bin/env ruby
 
 require 'open3'
-out, err, status = Open3.capture3(%w(bundle install))
+out, err, status = Open3.capture3(*%w(git submodule update --init --recursive))
 $stdout.puts out
 $stderr.puts err
-exit status.exitstatus unless status.exitstatus.nil?
+exit status.exitstatus if !status.exitstatus.nil? && status.exitstatus != 0
+unless ENV['CI']
+  out, err, status = Open3.capture3(*%w(bundle install))
+  $stdout.puts out
+  $stderr.puts err
+  exit status.exitstatus if !status.exitstatus.nil? && status.exitstatus != 0
+end

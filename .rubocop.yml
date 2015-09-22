@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - test/fixtures/**/*
+    - vendor/bundle/**/*
 Style/Documentation:
   Enabled: false
 Style/FileName:
