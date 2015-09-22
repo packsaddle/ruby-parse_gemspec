@@ -1,3 +1,6 @@
+AllCops:
+  Exclude:
+    - test/fixtures/**/*
 Style/Documentation:
   Enabled: false
 Style/FileName:
