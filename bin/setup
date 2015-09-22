@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'open3'
-out, err, status = Open3.capture3('bundle install')
+out, err, status = Open3.capture3(%w(bundle install))
 $stdout.puts out
 $stderr.puts err
 exit status.exitstatus unless status.exitstatus.nil?
