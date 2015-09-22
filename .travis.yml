@@ -1,7 +1,8 @@
-language: ruby
+language: "ruby"
 rvm:
-  - 2.0
-  - 2.1
-  - 2.2
-  - ruby-head
-before_install: gem update bundler
+  - "2.0"
+  - "2.1"
+  - "2.2"
+  - "ruby-head"
+before_install: "gem update bundler"
+script: "bundle exec rubocop && rake"
