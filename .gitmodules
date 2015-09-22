@@ -1,0 +1,3 @@
+[submodule "test/fixtures/rubocop-select"]
+	path = test/fixtures/rubocop-select
+	url = https://github.com/packsaddle/rubocop-select.git
