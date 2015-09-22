@@ -1,6 +1,7 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'parse_gemspec/constants'
 require 'parse_gemspec/version'
 
 Gem::Specification.new do |spec|
@@ -13,8 +14,7 @@ Gem::Specification.new do |spec|
     'TODO: Write a short summary, because Rubygems requires one.'
   spec.description   =
     'TODO: Write a longer description or delete this line.'
-  spec.homepage      =
-    "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = ParseGemspec::HOMEPAGE
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`
