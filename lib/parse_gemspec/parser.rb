@@ -5,7 +5,7 @@ module ParseGemspec
       Tempfile.create('parse_gemspec') do |f|
         f.write contents
         f.rewind
-        spec = Gem::Specification::load(f.path)
+        spec = Gem::Specification.load(f.path)
       end
       {
         name: spec.name,
