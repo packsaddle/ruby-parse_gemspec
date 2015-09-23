@@ -1,7 +1,7 @@
 require_relative 'helper'
 
 module ParseGemspec
-  class TestParser < Test::Unit::TestCase
+  class TestSpecification < Test::Unit::TestCase
     sub_test_case 'bigdecimal' do
       gemspec_path = './test/fixtures/bigdecimal-1.2.7/bigdecimal.gemspec'
       expected = {
@@ -10,7 +10,7 @@ module ParseGemspec
       }
       test '.load' do
         assert do
-          Parser.load(gemspec_path) == expected
+          ParseGemspec::Specification.load(gemspec_path).format == expected
         end
       end
     end
@@ -23,7 +23,7 @@ module ParseGemspec
       }
       test '.load' do
         assert do
-          Parser.load(gemspec_path) == expected
+          ParseGemspec::Specification.load(gemspec_path).format == expected
         end
       end
     end
