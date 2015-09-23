@@ -1,0 +1,17 @@
+PATH
+  remote: ../
+  specs:
+    parse_gemspec (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  parse_gemspec!
+
+BUNDLED WITH
+   1.10.6
