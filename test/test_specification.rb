@@ -11,7 +11,8 @@ module ParseGemspec
       gemspec_path = File.join(fixture_path, gemspec_file)
       expected = {
         name: 'bigdecimal',
-        version: '1.2.7'
+        version: '1.2.7',
+        homepage: 'http://www.ruby-lang.org'
       }
       test '.format' do
         assert do
@@ -28,7 +29,8 @@ module ParseGemspec
       gemspec_path = File.join(fixture_path, gemspec_file)
       expected = {
         name: 'rubocop-select',
-        version: '0.1.2.pre.beta'
+        version: '0.1.2.pre.beta',
+        homepage: 'https://github.com/packsaddle/rubocop-select'
       }
       test '.format' do
         assert do
@@ -45,7 +47,8 @@ module ParseGemspec
       gemspec_path = File.join(fixture_path, gemspec_file)
       expected = {
         name: 'checkstyle_filter-git',
-        version: '1.0.2'
+        version: '1.0.2',
+        homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
       }
       test '.format' do
         assert do
