@@ -2,7 +2,7 @@ require_relative 'helper'
 
 module ParseGemspec
   class TestSpecification < Test::Unit::TestCase
-    sub_test_case 'bigdecimal' do
+    sub_test_case 'gem as is (bigdecimal)' do
       gemspec_path = './test/fixtures/bigdecimal-1.2.7/bigdecimal.gemspec'
       expected = {
         name: 'bigdecimal',
@@ -15,7 +15,7 @@ module ParseGemspec
       end
     end
 
-    sub_test_case 'rubocop-select' do
+    sub_test_case 'git repository (rubocop-select)' do
       gemspec_path = './test/fixtures/rubocop-select/rubocop-select.gemspec'
       expected = {
         name: 'rubocop-select',
