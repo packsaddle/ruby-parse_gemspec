@@ -14,9 +14,10 @@ module ParseGemspec
         version: '1.2.7',
         homepage: 'http://www.ruby-lang.org'
       }
+      spec = ParseGemspec::Specification.load(gemspec_path)
       test '.format' do
         assert do
-          ParseGemspec::Specification.load(gemspec_path).format == expected
+          spec.to_hash_object == expected
         end
       end
     end
@@ -32,9 +33,10 @@ module ParseGemspec
         version: '0.1.2.pre.beta',
         homepage: 'https://github.com/packsaddle/rubocop-select'
       }
+      spec = ParseGemspec::Specification.load(gemspec_path)
       test '.format' do
         assert do
-          ParseGemspec::Specification.load(gemspec_path).format == expected
+          spec.to_hash_object == expected
         end
       end
     end
@@ -50,9 +52,10 @@ module ParseGemspec
         version: '1.0.2',
         homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
       }
+      spec = ParseGemspec::Specification.load(gemspec_path)
       test '.format' do
         assert do
-          ParseGemspec::Specification.load(gemspec_path).format == expected
+          spec.to_hash_object == expected
         end
       end
     end
