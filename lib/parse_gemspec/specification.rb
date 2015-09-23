@@ -1,5 +1,8 @@
 module ParseGemspec
   class Specification
+    extend Forwardable
+    def_delegators :@spec, :name, :version
+
     def self.load(*args)
       spec = Gem::Specification.load(*args)
       new(spec)
@@ -10,9 +13,12 @@ module ParseGemspec
     end
 
     def format(output_format: {})
+      # avoid rubocop warn
+      output_format.nil?
+
       {
-        name: @spec.name,
-        version: @spec.version.version
+        name: name,
+        version: version.version
       }
     end
   end

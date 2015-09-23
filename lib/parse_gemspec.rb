@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'forwardable'
 
 require 'parse_gemspec/constants'
 require 'parse_gemspec/specification'
