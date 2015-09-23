@@ -1,0 +1,15 @@
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# Ignore bundler binstubs
+/bundle_bin
+
+# Ignore bundled files
+/vendor/bundle/*
