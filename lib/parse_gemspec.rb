@@ -1,12 +1,11 @@
 require 'rubygems'
-require 'tempfile'
 
 require 'parse_gemspec/constants'
 require 'parse_gemspec/parser'
 require 'parse_gemspec/version'
 
 module ParseGemspec
-  def self.parse(contents)
-    Parser.parse(contents)
+  def self.load(gemspec_path)
+    Parser.load(gemspec_path)
   end
 end
