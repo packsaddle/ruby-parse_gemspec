@@ -1,7 +1,7 @@
 module ParseGemspec
   class Specification
     extend Forwardable
-    def_delegators :@spec, :name, :version
+    def_delegators :@spec, :name, :version, :homepage
 
     def self.load(*args)
       spec = Gem::Specification.load(*args)
@@ -18,7 +18,8 @@ module ParseGemspec
 
       {
         name: name,
-        version: version.version
+        version: version.version,
+        homepage: homepage
       }
     end
   end
