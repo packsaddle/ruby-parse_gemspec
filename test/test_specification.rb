@@ -8,7 +8,7 @@ module ParseGemspec
         name: 'bigdecimal',
         version: '1.2.7'
       }
-      test '.load' do
+      test '.format' do
         assert do
           ParseGemspec::Specification.load(gemspec_path).format == expected
         end
@@ -21,7 +21,20 @@ module ParseGemspec
         name: 'rubocop-select',
         version: '0.1.2.pre.beta'
       }
-      test '.load' do
+      test '.format' do
+        assert do
+          ParseGemspec::Specification.load(gemspec_path).format == expected
+        end
+      end
+    end
+
+    sub_test_case 'gem git command included (checkstyle_filter-git)' do
+      gemspec_path = './test/fixtures/checkstyle_filter-git-1.0.2/checkstyle_filter-git.gemspec'
+      expected = {
+        name: 'checkstyle_filter-git',
+        version: '1.0.2'
+      }
+      test '.format' do
         assert do
           ParseGemspec::Specification.load(gemspec_path).format == expected
         end
