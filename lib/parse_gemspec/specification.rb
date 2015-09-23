@@ -12,10 +12,7 @@ module ParseGemspec
       @spec = spec
     end
 
-    def format(output_format: {})
-      # avoid rubocop warn
-      output_format.nil?
-
+    def to_hash_object(format: {}) # rubocop:disable Lint/UnusedMethodArgument
       {
         name: name,
         version: version.version,
