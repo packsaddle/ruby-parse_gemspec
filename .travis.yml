@@ -10,4 +10,3 @@ matrix:
 before_install:
   - "gem update bundler"
   - "bin/setup"
-script: "bundle exec rubocop && rake"
