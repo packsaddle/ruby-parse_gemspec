@@ -4,6 +4,8 @@
 
 > Parse *.gemspec file. Convert to Hash object.
 
+See [parse_gemspec-cli](https://rubygems.org/gems/parse_gemspec-cli) ([repo](https://github.com/packsaddle/ruby-parse_gemspec-cli)) for the command-line version.
+
 
 ## Usage
 
