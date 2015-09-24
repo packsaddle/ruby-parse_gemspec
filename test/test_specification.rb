@@ -110,8 +110,7 @@ module ParseGemspec
         Dir.mktmpdir do |dir|
           command = ['gem', 'unpack', gem_path, '--target', dir]
           _, err, status = Open3.capture3(*command)
-          $stderr.puts err
-          fail if !status.exitstatus.nil? && status.exitstatus != 0
+          fail err if !status.exitstatus.nil? && status.exitstatus != 0
 
           gemspec_path = File.join(
             dir,
