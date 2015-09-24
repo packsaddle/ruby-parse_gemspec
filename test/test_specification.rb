@@ -22,6 +22,9 @@ module ParseGemspec
           name: 'bigdecimal',
           version: '1.2.7',
           authors: ['Kenta Murata', 'Zachary Scott', 'Shigeo Kobayashi'],
+          description:
+            'This library provides ' \
+            'arbitrary-precision decimal floating-point number class.',
           homepage: 'http://www.ruby-lang.org'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -50,6 +53,7 @@ module ParseGemspec
           name: 'rubocop-select',
           version: '0.1.2.pre.beta',
           authors: ['sanemat'],
+          description: 'Pipe between git diff and rubocop.',
           homepage: 'https://github.com/packsaddle/rubocop-select'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -86,6 +90,7 @@ module ParseGemspec
           name: 'checkstyle_filter-git',
           version: '1.0.2',
           authors: ['sanemat'],
+          description: 'Filter errors(checkstyle) by git diff.',
           homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
         }
         Dir.mktmpdir do |dir|
