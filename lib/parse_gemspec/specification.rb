@@ -14,7 +14,7 @@ module ParseGemspec
       @spec = spec
     end
 
-    def to_hash_object(format: {}) # rubocop:disable Lint/UnusedMethodArgument
+    def to_hash_object
       {
         name: name,
         version: version.version,
