@@ -25,6 +25,7 @@ module ParseGemspec
           description:
             'This library provides ' \
             'arbitrary-precision decimal floating-point number class.',
+          email: 'mrkn@mrkn.jp',
           homepage: 'http://www.ruby-lang.org'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -54,6 +55,7 @@ module ParseGemspec
           version: '0.1.2.pre.beta',
           authors: ['sanemat'],
           description: 'Pipe between git diff and rubocop.',
+          email: ['o.gata.ken@gmail.com'],
           homepage: 'https://github.com/packsaddle/rubocop-select'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -91,6 +93,7 @@ module ParseGemspec
           version: '1.0.2',
           authors: ['sanemat'],
           description: 'Filter errors(checkstyle) by git diff.',
+          email: ['o.gata.ken@gmail.com'],
           homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
         }
         Dir.mktmpdir do |dir|

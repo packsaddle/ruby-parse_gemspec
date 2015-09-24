@@ -2,6 +2,7 @@ module ParseGemspec
   class Specification
     extend Forwardable
     def_delegators :@spec, :name, :version, :authors, :description, :homepage
+    def_delegators :@spec, :email
 
     def self.load(file)
       fail GemspecFileNotFoundError, "file: #{file}" unless File.file?(file)
@@ -20,6 +21,7 @@ module ParseGemspec
         version: version.version,
         authors: authors,
         description: description,
+        email: email,
         homepage: homepage
       }
     end
