@@ -21,6 +21,7 @@ module ParseGemspec
         expected = {
           name: 'bigdecimal',
           version: '1.2.7',
+          authors: ['Kenta Murata', 'Zachary Scott', 'Shigeo Kobayashi'],
           homepage: 'http://www.ruby-lang.org'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -48,6 +49,7 @@ module ParseGemspec
         expected = {
           name: 'rubocop-select',
           version: '0.1.2.pre.beta',
+          authors: ['sanemat'],
           homepage: 'https://github.com/packsaddle/rubocop-select'
         }
         spec = ParseGemspec::Specification.load(gemspec_path)
@@ -83,6 +85,7 @@ module ParseGemspec
         expected = {
           name: 'checkstyle_filter-git',
           version: '1.0.2',
+          authors: ['sanemat'],
           homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
         }
         Dir.mktmpdir do |dir|
