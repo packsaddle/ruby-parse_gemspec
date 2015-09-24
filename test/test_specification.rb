@@ -15,7 +15,7 @@ module ParseGemspec
         homepage: 'http://www.ruby-lang.org'
       }
       spec = ParseGemspec::Specification.load(gemspec_path)
-      test '.format' do
+      test '.to_hash_object' do
         assert do
           spec.to_hash_object == expected
         end
@@ -34,7 +34,7 @@ module ParseGemspec
         homepage: 'https://github.com/packsaddle/rubocop-select'
       }
       spec = ParseGemspec::Specification.load(gemspec_path)
-      test '.format' do
+      test '.to_hash_object' do
         assert do
           spec.to_hash_object == expected
         end
@@ -53,7 +53,7 @@ module ParseGemspec
         homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
       }
       spec = ParseGemspec::Specification.load(gemspec_path)
-      test '.format' do
+      test '.to_hash_object' do
         assert do
           spec.to_hash_object == expected
         end
@@ -80,7 +80,7 @@ module ParseGemspec
     sub_test_case 'gem unpacked (checkstyle_filter-git)' do
       gem_file = 'checkstyle_filter-git-1.0.2.gem'
       gem_path = File.join(fixture_path, gem_file)
-      test '.format' do
+      test '.to_hash_object' do
         expected = {
           name: 'checkstyle_filter-git',
           version: '1.0.2',
