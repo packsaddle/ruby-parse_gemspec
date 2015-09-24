@@ -10,7 +10,13 @@ module ParseGemspec
       )
       gemspec_path = File.join(fixture_path, gemspec_file)
 
-      test '.to_hash_object' do
+      test '.load' do
+        assert_nothing_raised do
+          ParseGemspec::Specification.load(gemspec_path)
+        end
+      end
+
+      test '#to_hash_object' do
         expected = {
           name: 'bigdecimal',
           version: '1.2.7',
@@ -31,7 +37,13 @@ module ParseGemspec
       )
       gemspec_path = File.join(fixture_path, gemspec_file)
 
-      test '.to_hash_object' do
+      test '.load' do
+        assert_nothing_raised do
+          ParseGemspec::Specification.load(gemspec_path)
+        end
+      end
+
+      test '#to_hash_object' do
         expected = {
           name: 'rubocop-select',
           version: '0.1.2.pre.beta',
@@ -52,7 +64,13 @@ module ParseGemspec
       )
       gemspec_path = File.join(fixture_path, gemspec_file)
 
-      test '.to_hash_object' do
+      test '.load' do
+        assert_nothing_raised do
+          ParseGemspec::Specification.load(gemspec_path)
+        end
+      end
+
+      test '#to_hash_object' do
         expected = {
           name: 'checkstyle_filter-git',
           version: '1.0.2',
@@ -86,7 +104,26 @@ module ParseGemspec
     sub_test_case 'gem unpacked (checkstyle_filter-git)' do
       gem_file = 'checkstyle_filter-git-1.0.2.gem'
       gem_path = File.join(fixture_path, gem_file)
-      test '.to_hash_object' do
+
+      test '.load' do
+        Dir.mktmpdir do |dir|
+          command = ['gem', 'unpack', gem_path, '--target', dir]
+          _, err, status = Open3.capture3(*command)
+          $stderr.puts err
+          fail if !status.exitstatus.nil? && status.exitstatus != 0
+
+          gemspec_path = File.join(
+            dir,
+            'checkstyle_filter-git-1.0.2',
+            'checkstyle_filter-git.gemspec'
+          )
+          assert_nothing_raised do
+            ParseGemspec::Specification.load(gemspec_path)
+          end
+        end
+      end
+
+      test '#to_hash_object' do
         expected = {
           name: 'checkstyle_filter-git',
           version: '1.0.2',
