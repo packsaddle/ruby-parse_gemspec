@@ -91,7 +91,12 @@ module ParseGemspec
           _, err, status = Open3.capture3(*command)
           $stderr.puts err
           fail if !status.exitstatus.nil? && status.exitstatus != 0
-          gemspec_path = File.join(dir, 'checkstyle_filter-git-1.0.2', 'checkstyle_filter-git.gemspec')
+
+          gemspec_path = File.join(
+            dir,
+            'checkstyle_filter-git-1.0.2',
+            'checkstyle_filter-git.gemspec'
+          )
           spec = ParseGemspec::Specification.load(gemspec_path)
           assert do
             spec.to_hash_object == expected
