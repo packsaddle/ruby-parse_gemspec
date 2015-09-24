@@ -5,7 +5,7 @@
     "urijs": "^1.16.1"
   },
   "scripts": {
-    "ncu": "ncu -u",
-    "changelog": "conventional-changelog -i changelog.md --overwrite --preset angular --context .conventional-changelog.context.js"
+    "changelog": "conventional-changelog -i changelog.md --overwrite --preset angular --context .conventional-changelog.context.js",
+    "ncu": "ncu -u"
   }
 }
