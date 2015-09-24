@@ -71,33 +71,6 @@ module ParseGemspec
       end
     end
 
-    sub_test_case 'gem git command included (checkstyle_filter-git)' do
-      gemspec_file = File.join(
-        'checkstyle_filter-git-1.0.2',
-        'checkstyle_filter-git.gemspec'
-      )
-      gemspec_path = File.join(fixture_path, gemspec_file)
-
-      test '.load' do
-        assert_nothing_raised do
-          ParseGemspec::Specification.load(gemspec_path)
-        end
-      end
-
-      test '#to_hash_object' do
-        expected = {
-          name: 'checkstyle_filter-git',
-          version: '1.0.2',
-          homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git'
-        }
-        spec = ParseGemspec::Specification.load(gemspec_path)
-
-        assert do
-          spec.to_hash_object == expected
-        end
-      end
-    end
-
     test 'gemspec file not found' do
       invalid_gemspec_path = File.join('path', 'to', 'file_not_found.gemspec')
       assert_raise(GemspecFileNotFoundError) do
