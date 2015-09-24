@@ -3,6 +3,20 @@ require_relative 'helper'
 module ParseGemspec
   class TestSpecification < Test::Unit::TestCase
     fixture_path = File.join('.', 'test', 'fixtures')
+
+    def self.startup
+      @original_stderr = $stderr
+      @original_stdout = $stdout
+      # Redirect stderr and stdout
+      $stderr = File.open(File::NULL, 'w')
+      $stdout = File.open(File::NULL, 'w')
+    end
+
+    def self.shutdown
+      $stderr = @original_stderr
+      $stdout = @original_stdout
+    end
+
     sub_test_case 'gem as is (bigdecimal)' do
       gemspec_file = File.join(
         'bigdecimal-1.2.7',
@@ -87,7 +101,6 @@ module ParseGemspec
     test 'gemspec file not found' do
       invalid_gemspec_path = File.join('path', 'to', 'file_not_found.gemspec')
       assert_raise(GemspecFileNotFoundError) do
-        # FIXME: suppress stderr
         ParseGemspec::Specification.load(invalid_gemspec_path)
       end
     end
