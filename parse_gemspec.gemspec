@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
   spec.email         = ['o.gata.ken@gmail.com']
 
   spec.summary       =
-    'Parse *.gemspec file.'
+    'Parse *.gemspec file. Convert to Hash object.'
   spec.description   =
-    'Parse *.gemspec file.'
+    'Parse *.gemspec file. Convert to Hash object.'
   spec.homepage      = ParseGemspec::HOMEPAGE
   spec.license       = 'MIT'
 
