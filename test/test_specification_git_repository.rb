@@ -23,7 +23,10 @@ module ParseGemspec
         description: 'Pipe between git diff and rubocop.',
         email: ['o.gata.ken@gmail.com'],
         homepage: 'https://github.com/packsaddle/rubocop-select',
-        metadata: {}
+        metadata: {},
+        summary:
+          'Select file path only executable by RuboCop. ' \
+          'For Diff RuboCop!'
       }
       spec = ParseGemspec::Specification.load(gemspec_path)
 

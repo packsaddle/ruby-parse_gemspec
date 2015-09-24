@@ -31,7 +31,8 @@ module ParseGemspec
         description: 'Filter errors(checkstyle) by git diff.',
         email: ['o.gata.ken@gmail.com'],
         homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git',
-        metadata: {}
+        metadata: {},
+        summary: 'Filter checkstyle format errors on ONLY modified lines.'
       }
       Dir.mktmpdir do |dir|
         command = ['gem', 'unpack', gem_path, '--target', dir]

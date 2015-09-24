@@ -25,7 +25,8 @@ module ParseGemspec
             'arbitrary-precision decimal floating-point number class.',
         email: 'mrkn@mrkn.jp',
         homepage: 'http://www.ruby-lang.org',
-        metadata: {}
+        metadata: {},
+        summary: 'Arbitrary-precision decimal floating-point number library.'
       }
       spec = ParseGemspec::Specification.load(gemspec_path)
 
