@@ -31,6 +31,11 @@ Type: `string`
 
 ### ParseGemspec::Specification#to_hash_object -> Hash
 
+#### Hash's keys
+
+* name
+* version
+* homepage
 
 
 ## Changelog
