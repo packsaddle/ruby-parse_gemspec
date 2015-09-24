@@ -3,8 +3,8 @@ module ParseGemspec
     extend Forwardable
     def_delegators :@spec, :name, :version, :homepage
 
-    def self.load(*args)
-      spec = Gem::Specification.load(*args)
+    def self.load(file)
+      spec = Gem::Specification.load(file)
       new(spec)
     end
 
