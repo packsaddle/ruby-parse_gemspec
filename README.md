@@ -20,6 +20,18 @@ ParseGemspec::Specification.load(gemspec_path).to_hash_object
 
 ## API
 
+### ParseGemspec::Specification.load(file) -> ParseGemspec::Specification Instance
+
+#### file
+
+*Required*
+Type: `string`
+
+`*.gemspec`'s path.
+
+### ParseGemspec::Specification#to_hash_object -> Hash
+
+
 
 ## Changelog
 
