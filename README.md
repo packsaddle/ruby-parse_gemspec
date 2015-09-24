@@ -82,5 +82,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 [travis-url]: https://travis-ci.org/packsaddle/ruby-parse_gemspec
 [travis-image]: https://img.shields.io/travis/packsaddle/ruby-parse_gemspec/master.svg?style=flat-square&label=build%20%28linux%29
-[gem-url]: http://badge.fury.io/rb/parse_gemspec
+[gem-url]: https://rubygems.org/gems/parse_gemspec
 [gem-image]: http://img.shields.io/gem/v/parse_gemspec.svg?style=flat-square
