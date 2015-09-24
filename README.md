@@ -5,6 +5,27 @@
 > Parse *.gemspec file. Convert to Hash object.
 
 
+## Usage
+
+```ruby
+require 'parse_gemspec'
+
+gemspec_path = 'path/to/you_want_to_parse.gemspec'
+ParseGemspec::Specification.load(gemspec_path).to_hash_object
+=> {:name=>"you_want_to_parse",
+ :version=>"1.3.0",
+ :homepage=>"https://github.com/example/you_want_to_parse"}
+```
+
+
+## API
+
+
+## Changelog
+
+[changelog.md](./changelog.md).
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,19 +41,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install parse_gemspec
-
-
-## Usage
-
-TODO: Write usage instructions here
-
-
-## API
-
-
-## Changelog
-
-[changelog.md](./changelog.md).
 
 
 ## Development
