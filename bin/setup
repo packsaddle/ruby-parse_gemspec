@@ -11,3 +11,9 @@ unless ENV['CI']
   $stderr.puts err
   exit status.exitstatus if !status.exitstatus.nil? && status.exitstatus != 0
 end
+unless ENV['CI']
+  out, err, status = Open3.capture3(*%w(npm install))
+  $stdout.puts out
+  $stderr.puts err
+  exit status.exitstatus if !status.exitstatus.nil? && status.exitstatus != 0
+end
