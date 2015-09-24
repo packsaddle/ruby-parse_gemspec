@@ -22,7 +22,7 @@ module ParseGemspec
         authors: ['Kenta Murata', 'Zachary Scott', 'Shigeo Kobayashi'],
         description:
           'This library provides ' \
-            'arbitrary-precision decimal floating-point number class.',
+          'arbitrary-precision decimal floating-point number class.',
         email: 'mrkn@mrkn.jp',
         homepage: 'http://www.ruby-lang.org',
         metadata: {},
