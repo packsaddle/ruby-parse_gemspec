@@ -4,10 +4,9 @@ module ParseGemspec
     def_delegators :@spec, :name, :version, :homepage
 
     def self.load(file)
-      fail ParseGemspecError unless file
-      fail GemspecFileNotFoundError unless File.file?(file)
+      fail GemspecFileNotFoundError, "file: #{file}" unless File.file?(file)
       spec = Gem::Specification.load(file)
-      fail ParseGemspecError unless spec
+      fail ParseGemspecError, "file: #{file}" unless spec
       new(spec)
     end
 

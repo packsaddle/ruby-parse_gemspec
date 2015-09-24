@@ -59,5 +59,12 @@ module ParseGemspec
         end
       end
     end
+
+    test 'gemspec file not found' do
+      gemspec_path = File.join('path', 'to', 'file_not_found.gemspec')
+      assert_raise(GemspecFileNotFoundError) do
+        ParseGemspec::Specification.load(gemspec_path)
+      end
+    end
   end
 end
