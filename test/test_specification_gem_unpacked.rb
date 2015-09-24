@@ -31,6 +31,7 @@ module ParseGemspec
         description: 'Filter errors(checkstyle) by git diff.',
         email: ['o.gata.ken@gmail.com'],
         homepage: 'https://github.com/packsaddle/ruby-checkstyle_filter-git',
+        licenses: ['MIT'],
         metadata: {},
         summary: 'Filter checkstyle format errors on ONLY modified lines.'
       }

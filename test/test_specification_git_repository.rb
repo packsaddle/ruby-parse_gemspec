@@ -23,6 +23,7 @@ module ParseGemspec
         description: 'Pipe between git diff and rubocop.',
         email: ['o.gata.ken@gmail.com'],
         homepage: 'https://github.com/packsaddle/rubocop-select',
+        licenses: ['MIT'],
         metadata: {},
         summary:
           'Select file path only executable by RuboCop. ' \
