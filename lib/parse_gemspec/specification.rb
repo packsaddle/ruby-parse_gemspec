@@ -3,8 +3,10 @@ module ParseGemspec
     extend Forwardable
     def_delegators :@spec, :name, :version, :homepage
 
-    def self.load(*args)
-      spec = Gem::Specification.load(*args)
+    def self.load(file)
+      fail GemspecFileNotFoundError, "file: #{file}" unless File.file?(file)
+      spec = Gem::Specification.load(file)
+      fail ParseGemspecError, "file: #{file}" unless spec
       new(spec)
     end
 
