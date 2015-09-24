@@ -16,7 +16,13 @@ gemspec_path = 'path/to/you_want_to_parse.gemspec'
 ParseGemspec::Specification.load(gemspec_path).to_hash_object
 => {:name=>"you_want_to_parse",
  :version=>"1.3.0",
- :homepage=>"https://github.com/example/you_want_to_parse"}
+ :authors=>["sanemat"],
+ :description=>"Description you want to parse.",
+ :email=>["you_want_to_parse@example.com"],
+ :homepage=>"https://example.com/you_want_to_parse",
+ :licenses=>["MIT"],
+ :metadata=>{},
+ :summary=>"Summary you want to parse."}
 ```
 
 
@@ -37,7 +43,13 @@ Type: `string`
 
 * name
 * version
+* authors
+* description
+* email
 * homepage
+* licences
+* metadata
+* summary
 
 
 ## Changelog
