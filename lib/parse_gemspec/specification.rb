@@ -1,7 +1,7 @@
 module ParseGemspec
   class Specification
     extend Forwardable
-    def_delegators :@spec, :name, :version, :authors, :description, :homepage
+    def_delegators :@spec, :name, :authors, :description, :homepage
     def_delegators :@spec, :email, :metadata, :summary, :licenses
 
     def self.load(file)
@@ -15,10 +15,14 @@ module ParseGemspec
       @spec = spec
     end
 
+    def version
+      @spec.version.version
+    end
+
     def to_hash_object # rubocop:disable Metrics/MethodLength
       {
         name: name,
-        version: version.version,
+        version: version,
         authors: authors,
         description: description,
         email: email,
