@@ -1,3 +1,9 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/packsaddle/ruby-parse_gemspec/compare/v0.5.0...v1.0.0) (2017-01-01)
+
+* Requires ruby version 2.0
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/packsaddle/ruby-parse_gemspec/compare/v0.4.0...v0.5.0) (2015-09-24)
 
