@@ -2,7 +2,7 @@
 
 [![Gem version][gem-image]][gem-url] [![Travis-CI Status][travis-image]][travis-url]
 
-> Parse *.gemspec file. Convert to Ruby Hash object.
+> Parse *.gemspec file. Convert to Ruby Hash Object.
 
 See [parse_gemspec-cli](https://rubygems.org/gems/parse_gemspec-cli) ([repo](https://github.com/packsaddle/ruby-parse_gemspec-cli)) for the command-line version.
 
