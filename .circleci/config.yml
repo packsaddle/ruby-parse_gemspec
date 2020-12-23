@@ -23,6 +23,9 @@ jobs:
           name: bundle install
           command: bundle install
       - run:
+          name: bin/setup
+          command: bin/setup
+      - run:
           name: test
           command: bundle exec rake
 workflows:
