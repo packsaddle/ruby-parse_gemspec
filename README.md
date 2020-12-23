@@ -1,6 +1,6 @@
 # ParseGemspec
 
-[![Gem version][gem-image]][gem-url] [![Travis-CI Status][travis-image]][travis-url]
+[![Gem version][gem-image]][gem-url] [![CI Status][ci-image]][ci-url]
 
 > Parse *.gemspec file. Convert to Ruby Hash object.
 
@@ -92,7 +92,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/packsa
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-[travis-url]: https://travis-ci.org/packsaddle/ruby-parse_gemspec
-[travis-image]: https://img.shields.io/travis/packsaddle/ruby-parse_gemspec/master.svg?style=flat-square&label=build%20%28linux%29
+[ci-url]: https://circleci.com/gh/packsaddle/ruby-parse_gemspec
+[ci-image]: https://img.shields.io/circleci/build/github/packsaddle/ruby-parse_gemspec?style=flat-square
 [gem-url]: https://rubygems.org/gems/parse_gemspec
 [gem-image]: http://img.shields.io/gem/v/parse_gemspec.svg?style=flat-square
